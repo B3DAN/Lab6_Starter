@@ -117,6 +117,7 @@ class RecipeCard extends HTMLElement {
    */
   set data(data) {
     // If nothing was passed in, return
+
     if (!data) return;
 
     // A6. TODO - Select the <article> we added to the Shadow DOM in the constructor
@@ -124,7 +125,8 @@ class RecipeCard extends HTMLElement {
     //Need to parse the shadow to get the created instance
     let article = this.shadowRoot.querySelector('article');
 
-  console.log(article);
+    console.log("fired data 2");
+    console.log(data);
 
     // A7. TODO - Set the contents of the <article> with the <article> template given in
     //           cardTemplate.html and the data passed in (You should only have one <article>,
@@ -150,7 +152,7 @@ class RecipeCard extends HTMLElement {
     ${data.ingredients}
   </p>`
 
-    
+    console.log(article.innerHTML);
     
   }
 }
